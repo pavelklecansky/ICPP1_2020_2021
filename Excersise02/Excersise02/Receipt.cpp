@@ -2,6 +2,9 @@
 
 Receipt::Receipt()
 {
+	id = -1;
+	cost = 0;
+	dph = 0;
 }
 
 Receipt::Receipt(int id, double cost, double dph)
