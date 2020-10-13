@@ -26,8 +26,9 @@ Receipt& CashRegister::CreateReceipt(double cost, double dph)
 		throw std::exception("CashRegister is full.");
 	}
 	// - Nastaveni uctenky (vytvoreni inctance?) - id, cost ,dph
-	Receipt receipt{ receiptCounter, cost, dph };
-	receipts[receiptCounter] = receipt;
+	receipts[receiptCounter].SetId(receiptCounter);
+	receipts[receiptCounter].SetCost(cost);
+	receipts[receiptCounter].SetDph(dph);
 	// - Inkrementace poctu uctenek/idCounter
 	idCounter++;
 	// - vratit danou uètenku
