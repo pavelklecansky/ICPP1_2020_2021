@@ -23,7 +23,7 @@ Receipt& CashRegister::CreateReceipt(double cost, double dph)
 	//	- pokud max dosazeno tak bych vyhodili vyjimku
 	if (receiptCounter == MAX_RECEIPTS)
 	{
-		throw new std::exception("CashRegister is full.");
+		throw std::exception("CashRegister is full.");
 	}
 	// - Nastaveni uctenky (vytvoreni inctance?) - id, cost ,dph
 	Receipt receipt{ receiptCounter, cost, dph };
@@ -34,11 +34,11 @@ Receipt& CashRegister::CreateReceipt(double cost, double dph)
 	return receipts[receiptCounter++];
 }
 
-Receipt& CashRegister::GetReceipt(int id)
+Receipt& CashRegister::GetReceipt(int index)
 {
-	if (id >= 0 && id < MAX_RECEIPTS)
+	if (index >= 0 && index < MAX_RECEIPTS)
 	{
-		return receipts[id];
+		return receipts[index];
 	}
 	return receipts[0];
 }
