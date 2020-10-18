@@ -3,6 +3,8 @@
 Object::Object(int id)
 {
 	this->id = id;
+	x = 0;
+	y = 0;
 }
 
 int Object::GetId() const

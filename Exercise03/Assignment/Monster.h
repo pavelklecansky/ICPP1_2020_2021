@@ -8,6 +8,7 @@ class Monster :public MovingObject
 	int hp;
 	int maxHp;
 public:
+	Monster(int id);
 	int GetHp() const;
 	void SetHp(int hp);
 	int GetMaxHp() const;

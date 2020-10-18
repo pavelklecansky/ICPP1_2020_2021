@@ -7,6 +7,7 @@ class MovingObject : public Object
 {
 	double angleOfRotation;
 public:
+	MovingObject(int id);
 	double GetAngleOfRotation() const;
 	void SetAngleOfRotation(double angle);
 };

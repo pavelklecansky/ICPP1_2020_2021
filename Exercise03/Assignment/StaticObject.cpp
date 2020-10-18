@@ -5,7 +5,7 @@ StaticObject::StaticObject(int id, TypeOfObstacle typeOfObstacle) : Object(id)
 	this->TypeOfObstacleAttribut = typeOfObstacle;
 }
 
-TypeOfObstacle StaticObject::GetTypeOfObstacle()
+TypeOfObstacle StaticObject::GetTypeOfObstacle() const
 {
 	return TypeOfObstacleAttribut;
 }

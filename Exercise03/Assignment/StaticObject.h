@@ -10,7 +10,7 @@ class StaticObject : public Object
 	TypeOfObstacle TypeOfObstacleAttribut;
 public:
 	StaticObject(int id, TypeOfObstacle typeOfObstacle);
-	TypeOfObstacle GetTypeOfObstacle();
+	TypeOfObstacle GetTypeOfObstacle() const;
 };
 
 #endif

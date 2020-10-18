@@ -1,5 +1,13 @@
 #include "Monster.h"
 
+
+
+Monster::Monster(int id) : MovingObject(id)
+{
+	hp = 0;
+	maxHp = 0;
+}
+
 int Monster::GetHp() const
 {
 	return hp;
