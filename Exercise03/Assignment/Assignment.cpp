@@ -1,21 +1,60 @@
-// Assignment.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include "TypeOfObstacle.h"
+#include "Object.h"
+#include "StaticObject.h"
+#include "Game.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	/*Object* objekt = new StaticObject{ 1, TypeOfObstacle::Rock };
+	StaticObject* so = dynamic_cast<StaticObject*>(objekt);
+	if (so != nullptr)
+		std::cout << "objekt je StatickyObjekt(nebo jeho potomek)" << so->GetTypeOfObstacle();*/
+		/*Game hra = Game();
+		for (int i = 0; i < 100; i++)
+		{
+			hra.addObject(new Object(1));
+		}*/
+		/*Game hra = Game();
+		for (int i = 0; i < 10; i++)
+		{
+			Object* newObject = new StaticObject(i, TypeOfObstacle::SmallPlant);
+			newObject->SetX(120);
+			newObject->SetY(100);
+			hra.addObject(newObject);
+		}
+		int* ids = hra.findIdOfStaticObject(50, 200, 80, 120);
+		for (int i = 0; i < 10; i++)
+		{
+			std::cout << ids[i] << std::endl;
+		}*/
+
+		//Game hra = Game();
+		//for (int i = 0; i < 10; i++)
+		//{
+		//	Object* newObject = new MovingObject(i);
+		//	newObject->SetX(120);
+		//	newObject->SetY(100);
+		//	hra.addObject(newObject);
+		//}
+		//MovingObject** moving = hra.findMovingObjectsInArea(120, 100, 10);
+		//for (int i = 0; i < 10; i++)
+		//{
+		//	std::cout << moving[i]->GetId() << std::endl;
+		//}
+
+	/*Game hra = Game();
+	for (int i = 0; i < 10; i++)
+	{
+		MovingObject* newObject = new MovingObject(i);
+		newObject->SetX(120);
+		newObject->SetY(100);
+		newObject->SetAngleOfRotation(10 * i);
+		hra.addObject(newObject);
+	}
+	MovingObject** moving = hra.findMovingObjectsInArea(120, 100, 10, 10, 150);
+	for (int i = 0; i < 10; i++)
+	{
+		std::cout << moving[i]->GetAngleOfRotation() << std::endl;
+	}*/
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
