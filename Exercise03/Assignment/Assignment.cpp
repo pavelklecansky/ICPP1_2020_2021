@@ -10,12 +10,12 @@ int main()
 	StaticObject* so = dynamic_cast<StaticObject*>(objekt);
 	if (so != nullptr)
 		std::cout << "objekt je StatickyObjekt(nebo jeho potomek)" << so->GetTypeOfObstacle();*/
-		/*Game hra = Game();
+		/*Game hra{};
 		for (int i = 0; i < 100; i++)
 		{
 			hra.addObject(new Object(1));
 		}*/
-		/*Game hra = Game();
+		/*Game hra{};
 		for (int i = 0; i < 10; i++)
 		{
 			Object* newObject = new StaticObject(i, TypeOfObstacle::SmallPlant);
@@ -29,7 +29,7 @@ int main()
 			std::cout << ids[i] << std::endl;
 		}*/
 
-		//Game hra = Game();
+		//Game hra{};
 		//for (int i = 0; i < 10; i++)
 		//{
 		//	Object* newObject = new MovingObject(i);
@@ -43,7 +43,7 @@ int main()
 		//	std::cout << moving[i]->GetId() << std::endl;
 		//}
 
-	/*Game hra = Game();
+	/*Game hra{};
 	for (int i = 0; i < 10; i++)
 	{
 		MovingObject* newObject = new MovingObject(i);
