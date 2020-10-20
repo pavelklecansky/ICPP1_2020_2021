@@ -15,7 +15,7 @@ int main()
 		{
 			hra.addObject(new Object(1));
 		}*/
-		/*Game hra{};
+		Game hra{};
 		for (int i = 0; i < 10; i++)
 		{
 			Object* newObject = new StaticObject(i, TypeOfObstacle::SmallPlant);
@@ -27,7 +27,9 @@ int main()
 		for (int i = 0; i < 10; i++)
 		{
 			std::cout << ids[i] << std::endl;
-		}*/
+		}
+		delete ids;
+		
 
 		//Game hra{};
 		//for (int i = 0; i < 10; i++)
@@ -43,18 +45,25 @@ int main()
 		//	std::cout << moving[i]->GetId() << std::endl;
 		//}
 
-	/*Game hra{};
-	for (int i = 0; i < 10; i++)
-	{
-		MovingObject* newObject = new MovingObject(i);
-		newObject->SetX(120);
-		newObject->SetY(100);
-		newObject->SetAngleOfRotation(10 * i);
-		hra.addObject(newObject);
-	}
-	MovingObject** moving = hra.findMovingObjectsInArea(120, 100, 10, 10, 150);
-	for (int i = 0; i < 10; i++)
-	{
-		std::cout << moving[i]->GetAngleOfRotation() << std::endl;
-	}*/
+		//delete[] moving;
+
+
+	//Game hra{};
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	MovingObject* newObject = new MovingObject(i);
+	//	newObject->SetX(120);
+	//	newObject->SetY(100);
+	//	newObject->SetAngleOfRotation(10 * i);
+	//	hra.addObject(newObject);
+	//}
+	//MovingObject** moving = hra.findMovingObjectsInArea(120, 100, 10, 10, 150);
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	std::cout << moving[i]->GetAngleOfRotation() << std::endl;
+	//}
+	//
+	//delete[] moving;
+	
+	
 }
