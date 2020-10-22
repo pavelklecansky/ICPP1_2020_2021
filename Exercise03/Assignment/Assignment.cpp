@@ -15,7 +15,7 @@ int main()
 		{
 			hra.addObject(new Object(1));
 		}*/
-		Game hra{};
+	/*	Game hra{};
 		for (int i = 0; i < 10; i++)
 		{
 			Object* newObject = new StaticObject(i, TypeOfObstacle::SmallPlant);
@@ -28,7 +28,7 @@ int main()
 		{
 			std::cout << ids[i] << std::endl;
 		}
-		delete ids;
+		delete ids;*/
 		
 
 		//Game hra{};
