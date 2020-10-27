@@ -7,7 +7,7 @@ using namespace std;
 
 class IObject {
 public:
-	virtual ~IObject();
+	virtual ~IObject() {};
 	virtual string toString() const = 0;
 };
 

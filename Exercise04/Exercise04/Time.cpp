@@ -14,7 +14,16 @@ Time::Time(int hours, int minutes, int seconds)
 
 int Time::compareTo(IComparable* obj) const
 {
+	if (nullptr == obj)
+	{
+		throw exception("Null pointer");
+	}
+
 	Time* secondTime = dynamic_cast<Time*>(obj);
+	if (secondTime == obj)
+	{
+		throw exception("Bad datatype");
+	}
 	int firstSeconds = this->GetAllSeconds();
 	int secondSeconds = secondTime->GetAllSeconds();
 
@@ -25,9 +34,7 @@ int Time::compareTo(IComparable* obj) const
 	else if (firstSeconds == secondSeconds) {
 		return 0;
 	}
-	else {
-		return -1;
-	}
+	return -1;
 }
 
 string Time::toString() const

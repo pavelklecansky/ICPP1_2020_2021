@@ -7,7 +7,7 @@ using namespace std;
 
 class IComparable : public IObject  {
 public:
-	virtual ~IComparable();
+	virtual ~IComparable() {};
 	virtual int compareTo(IComparable* obj) const = 0;
 };
 
