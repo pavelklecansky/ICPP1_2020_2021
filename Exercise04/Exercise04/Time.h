@@ -12,7 +12,6 @@ class Time : public IComparable
 	int GetAllSeconds() const;
 public:
 	Time(int hours, int minutes, int seconds);
-
 	int compareTo(IComparable* obj) const;
 	string  toString() const;
 };
