@@ -3,7 +3,7 @@
 #include "Time.h"
 #include <time.h>
 
-#define MAX_ARRAY_SIZE 10
+#define MAX_ARRAY_SIZE 5000
 
 void Swap(IComparable** first, IComparable** second) {
 	IComparable* temp = *first;
@@ -23,7 +23,7 @@ void SortArray(IComparable** arrayOfComparable, int arraySize) {
 				wasSwap = true;
 			}
 		}
-		if (wasSwap == false) {
+		if (!wasSwap) {
 			break;
 		}
 	}
