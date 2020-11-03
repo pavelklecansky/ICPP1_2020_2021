@@ -32,7 +32,7 @@ namespace Model {
 		void SetPerson(Entity::Person person) { this->person = person; }
 	};
 
-	struct Phonebook
+	class Phonebook
 	{
 		ListNode* beginning = nullptr;
 	public:
