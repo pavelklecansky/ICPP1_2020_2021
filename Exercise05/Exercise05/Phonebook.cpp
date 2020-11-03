@@ -2,6 +2,18 @@
 #include <stdexcept>
 
 
+Model::Phonebook::~Phonebook()
+{
+	ListNode* temp = beginning;
+	while (temp != nullptr)
+	{
+		ListNode* dalsi = temp->GetNextNode();
+		delete temp;
+		temp = dalsi;
+	}
+	beginning = nullptr;
+}
+
 void Model::Phonebook::AddPerson(Entity::Person person)
 {
 	if (beginning == nullptr)

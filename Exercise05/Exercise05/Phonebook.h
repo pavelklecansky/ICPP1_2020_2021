@@ -32,20 +32,16 @@ namespace Model {
 		void SetPerson(Entity::Person person) { this->person = person; }
 	};
 
-	class Phonebook
+	struct Phonebook
 	{
 		ListNode* beginning = nullptr;
 	public:
 		Phonebook() {};
-		~Phonebook() {};
+		~Phonebook();
 		void AddPerson(Entity::Person person);
 		std::string FindPhone(std::string name) const;
 		std::string FindPhone(int id) const;
-
-		
 	};
-
-	
 }
 
 #endif // !PHONEBOOK_H
