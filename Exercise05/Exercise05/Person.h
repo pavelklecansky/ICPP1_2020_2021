@@ -11,10 +11,9 @@ namespace Entity {
 		std::string name;
 		std::string phone;
 	public:
-		Person() {
-			this->id = -1;
-			this->name = "Undefiend";
-			this->phone = "Undefiend";
+		Person()
+		{
+
 		}
 		Person(int id, std::string name, std::string phone)
 		{
