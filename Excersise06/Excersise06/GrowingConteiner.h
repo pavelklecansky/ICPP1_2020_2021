@@ -3,7 +3,6 @@
 #ifndef GROWING_CONTEINER_H
 #define GROWING_CONTEINER_H
 
-
 #include <stdexcept>
 //
 template<typename DataType, int DefaultCapacity = 5, int GrowingCoefficient = 2>
@@ -14,9 +13,8 @@ class GrowingConteiner
 	unsigned  arraySize;
 	bool IsSpaceInArray() const;
 	void ExpendArray();
-
 public:
-	GrowingConteiner() ;
+	GrowingConteiner();
 	~GrowingConteiner();
 	void Add(const DataType& o);
 	unsigned int Size();
@@ -46,16 +44,12 @@ inline GrowingConteiner<DataType, DefaultCapacity, GrowingCoefficient>::~Growing
 template<typename DataType, int DefaultCapacity, int GrowingCoefficient>
 inline void GrowingConteiner<DataType, DefaultCapacity, GrowingCoefficient>::Add(const DataType& data)
 {
-	if (IsSpaceInArray())
+	if (!IsSpaceInArray())
 	{
-		_array[arraySize] = data;
-		arraySize++;
-	}
-	else {
 		ExpendArray();
-		_array[arraySize] = data;
-		arraySize++;
 	}
+	_array[arraySize] = data;
+	arraySize++;
 }
 
 template<typename DataType, int DefaultCapacity, int GrowingCoefficient>
@@ -88,7 +82,7 @@ inline DataType& GrowingConteiner<DataType, DefaultCapacity, GrowingCoefficient>
 {
 	if (index < 0 || index >= arraySize)
 	{
-		throw std::invalid_argument("Invalid index");
+		throw std::out_of_range("Invalid index");
 	}
 	return _array[index];
 }
@@ -98,7 +92,7 @@ inline DataType GrowingConteiner<DataType, DefaultCapacity, GrowingCoefficient>:
 {
 	if (index < 0 || index >= arraySize)
 	{
-		throw std::invalid_argument("Invalid index");
+		throw std::out_of_range("Invalid index");
 	}
 	return _array[index];
 }
