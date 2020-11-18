@@ -21,6 +21,14 @@ public:
 		_dateOfBirth = dateOfBirth;
 	}
 	virtual ~Person() {};
+
+	friend std::ostream& operator <<  (std::ostream& os, const Person& person) {
+		return os << person._firstName << " " << person._lastName << " " << person._address << " " << person._dateOfBirth;
+	}
+
+	friend std::istream& operator >> (std::istream& is, Person& person) {
+		return is >> person._firstName >> person._lastName >> person._address >> person._dateOfBirth;
+	}
 };
 
 #endif // !PERSON_H

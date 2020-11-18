@@ -18,6 +18,14 @@ public:
 		this->_psc = psc;
 	}
 	virtual ~Address() {};
+
+	friend std::ostream& operator <<  (std::ostream& os, const Address& addresa) {
+		return os << addresa._street << " " << addresa._town << " " << addresa._psc;
+	}
+
+	friend std::istream& operator >> (std::istream& is, Address& addresa) {
+		return is >> addresa._street >> addresa._town >> addresa._psc;
+	}
 };
 
 #endif

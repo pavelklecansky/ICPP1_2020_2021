@@ -17,6 +17,15 @@ public:
 		_month = month;
 		_year = year;
 	};
-	virtual ~Date();
+	virtual ~Date() {};
+
+	friend std::ostream& operator <<  (std::ostream& os, const Date& date) {
+		return os << date._day << " " << date._month << " " << date._year;
+	}
+
+	friend std::istream& operator >> (std::istream& is, Date& date) {
+		return is >> date._day >> date._month >> date._year;
+	}
+
 };
 #endif
