@@ -46,6 +46,7 @@ void Load() {
 		{
 			people[i] = person;
 		}
+		in.close();
 	}
 
 
