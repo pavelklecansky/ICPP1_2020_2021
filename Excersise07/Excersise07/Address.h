@@ -11,11 +11,9 @@ class Address
 	int _psc;
 public:
 	Address() {};
-	Address(std::string street, std::string town, int psc)
+	Address(std::string street, std::string town, int psc) : _street(street), _town(town)
 	{
-		this->_street = street;
-		this->_town = town;
-		this->_psc = psc;
+		_psc = psc;
 	}
 	virtual ~Address() {};
 

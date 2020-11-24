@@ -14,9 +14,9 @@ class Person
 	Date _dateOfBirth;
 public:
 	Person() {};
-	Person(std::string firstName, std::string lastName, Address address, Date dateOfBirth) {
-		_firstName = firstName;
-		_lastName = lastName;
+	Person(std::string firstName, std::string lastName, Address address, Date dateOfBirth)
+		: _firstName(firstName), _lastName(lastName)
+	{
 		_address = address;
 		_dateOfBirth = dateOfBirth;
 	}
