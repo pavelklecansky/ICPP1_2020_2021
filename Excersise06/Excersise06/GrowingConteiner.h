@@ -21,7 +21,7 @@ public:
 	DataType& operator[](int index);
 	DataType operator[](int index) const;
 };
-#endif
+
 
 template<typename DataType, int DefaultCapacity, int GrowingCoefficient>
 inline GrowingConteiner<DataType, DefaultCapacity, GrowingCoefficient>::GrowingConteiner()
@@ -96,3 +96,4 @@ inline DataType GrowingConteiner<DataType, DefaultCapacity, GrowingCoefficient>:
 	}
 	return _array[index];
 }
+#endif
