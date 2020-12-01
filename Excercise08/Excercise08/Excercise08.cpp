@@ -46,6 +46,7 @@ void Load() {
 		{
 			in.read((char*)&people[i], sizeof(Person));
 		}
+		in.close();
 	}
 	PrintArray(MAX_ARRAY, people);
 }
