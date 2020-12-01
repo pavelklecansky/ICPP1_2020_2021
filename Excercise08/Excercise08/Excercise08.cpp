@@ -19,7 +19,7 @@ void Save() {
 		{"Josef","Renkl",Address("Reklova","Renklov",47741),Date(19,5,1975)},
 	};
 	ofstream out{};
-	out.open("people.dat",ios_base::binary);
+	out.open("people.dat",ios_base::binary | ios::out);
 	if (out.is_open())
 	{
 		for (int i = 0; i < MAX_ARRAY; i++)
@@ -34,21 +34,23 @@ void Save() {
 }
 
 void Load() {
-	Person people[MAX_ARRAY];
+	
 	ifstream in{};
 
-	in.open("people.dat", ios_base::binary);
-
+	in.open("people.dat", ios_base::binary | ios::out);
+	in.seekg(0, std::ios::end);
+	int numberOfPeople = in.tellg() / sizeof(Person);
+	in.seekg(0);
+	Person* persons = new Person[numberOfPeople];
 	if (in.is_open())
 	{
-		Person person;
-		for (int i = 0; i < MAX_ARRAY; i++)
+		for (int i = 0; i < numberOfPeople; i++)
 		{
-			in.read((char*)&people[i], sizeof(Person));
+			in.read((char*)&persons[i], sizeof(Person));
 		}
 		in.close();
 	}
-	PrintArray(MAX_ARRAY, people);
+	PrintArray(numberOfPeople, persons);
 }
 
 int main(int argc, char** argv)
